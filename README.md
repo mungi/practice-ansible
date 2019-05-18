@@ -1,0 +1,2 @@
+# practice-ansible
+Ansible example
