@@ -5,8 +5,9 @@ Ansible 실습 환경설정
 
 - [Windows](https://download.virtualbox.org/virtualbox/6.0.4/VirtualBox-6.0.4-128413-Win.exe)
 
-- [macOS](https://download.virtualbox.org/virtualbox/6.0.4/VirtualBox-6.0.4-128413-OSX.dmg) 
-또는 ```brew cask install virtualbox virtualbox-extension-pack```
+- [macOS](https://download.virtualbox.org/virtualbox/6.0.4/VirtualBox-6.0.4-128413-OSX.dmg)  
+또는  
+```brew cask install virtualbox virtualbox-extension-pack```
 
 
 - [VirtualBox Extendtion Pack](https://download.virtualbox.org/virtualbox/6.0.4/Oracle_VM_VirtualBox_Extension_Pack-6.0.4.vbox-extpack)
@@ -26,7 +27,7 @@ Ansible 실습 환경설정
 ```vagrant box add centos/7```
 
 #### Vagrant 파일
-```
+``` sh
 mkdir ansible
 cd ansible
 wget https://raw.githubusercontent.com/mungi/practice-ansible/master/Vagrantfile
@@ -34,50 +35,51 @@ wget https://raw.githubusercontent.com/mungi/practice-ansible/master/Vagrantfile
 
 ### 4. Vagrant 사용법
 
-상태확인  
+- 상태확인  
 ```vagrant status [VM]```
 
-시작  
+- 시작  
 ```vagrant up [VM]```
 
-일시중지  
+- 일시중지  
 ```vagrant suspend [VM]```
 
-재개  
+- 재개  
 ```vagrant resume [VM]```
 
-중지  
+- 중지  
 ```vagrant halt [VM]```
 
-삭제  
+- 삭제  
 ```vagrant destroy [VM]```
 
-SSH 연결
+- SSH 연결
 ```vagrant ssh [VM]```
 
-스냅샷 확인  
+- 스냅샷 확인  
 ```vagrant snapshot list [VM]```
 
-스냅샷 생성
+- 스냅샷 생성
 ```vagrant snapshot save [VM]  <SNAP-NAME>```
 
-스냅샷 복구
+- 스냅샷 복구
 ```vagrant snapshot restore [VM]  <SNAP-NAME>```
 
 공유폴더 동기화
 - 공유폴더 동기화는 Vagrantfile이 있는 현재 디렉토리와 VM의 /vagrant 파일이 기본 동기화 됨
-- 공유폴더 동기화가 되는 시점은 vagrant up 명령을 실행할 때만 동기화 됨
-> vagrant rsync [VM]  
+- 공유폴더 동기화가 되는 시점은 vagrant up 명령을 실행할 때만 동기화 됨  
+``` vagrant rsync [VM]```
 
 ### 5. Playbook 작성을 위한 에디터 도구 팁
 
 #### 1) vi/vim
-vim-enhanced
-```
+vim-enhanced 설치 필요
+``` sh
+yum -y install vim
 echo "autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab" >> ~/.vimrc
 ```
 
 #### 2) Visual Studio Code
 [VSCODE](https://code.visualstudio.com)  
-또는
-> brew cask install visual-studio-code
+또는  
+```brew cask install visual-studio-code```
