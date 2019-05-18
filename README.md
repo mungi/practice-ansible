@@ -53,16 +53,16 @@ wget https://raw.githubusercontent.com/mungi/practice-ansible/master/Vagrantfile
 - 삭제  
 ```vagrant destroy [VM]```
 
-- SSH 연결
+- SSH 연결  
 ```vagrant ssh [VM]```
 
 - 스냅샷 확인  
 ```vagrant snapshot list [VM]```
 
-- 스냅샷 생성
+- 스냅샷 생성  
 ```vagrant snapshot save [VM]  <SNAP-NAME>```
 
-- 스냅샷 복구
+- 스냅샷 복구  
 ```vagrant snapshot restore [VM]  <SNAP-NAME>```
 
 공유폴더 동기화
