@@ -1,0 +1,3 @@
+- name: Installing Web Package
+  yum:
+    name: "{{ web.svc.pkg }}"

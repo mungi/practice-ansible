@@ -1,0 +1,4 @@
+- name: Restart Web Service
+  service:
+    name: "{{ web.svc.name }}"
+    state: "{{ mode }}"

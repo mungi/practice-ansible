@@ -1,0 +1,4 @@
+- name: Start Web Service
+  service:
+    name: "{{ web.svc.name }}"
+    state: "{{ mode }}"

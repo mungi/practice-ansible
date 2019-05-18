@@ -1,0 +1,6 @@
+- name: Copying Configuration File
+  template:
+    src: "{{ web.file.config.src }}"
+    dest: "{{ web.file.config.dst }}"
+  notify:
+    - "Restart Web Service"

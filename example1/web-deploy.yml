@@ -1,0 +1,13 @@
+---
+- name: Web Deployment
+  become: true
+  hosts: web1
+  tasks:
+    - include_vars: var/vars.yml
+    - include: install.yml
+    - include: template.yml
+    - include: content.yml
+    - include: service.yml mode=started
+  handlers:
+    - include: service.yml mode=restarted
+
